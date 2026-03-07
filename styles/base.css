@@ -87,12 +87,16 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* ---------- main layout: centered width ---------- */
+/* ---------- main layout: centered width + CSS Grid ---------- */
+/* FIXED: Consolidated both main rules into one */
 main {
     max-width: 1100px;
     width: 90%;
     margin: 2rem auto;
     flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;    /* mobile default stacked */
+    gap: 2rem;
 }
 
 h1 {
@@ -103,23 +107,14 @@ h1 {
     margin: 1rem 0 2rem 0;
     border-left: 8px solid var(--accent-deep);
     padding-left: 1.5rem;
-}
-
-/* ---------- cards grid layout (CSS Grid) ---------- */
-main {
-    display: grid;
-    grid-template-columns: 1fr;    /* mobile default stacked */
-    gap: 2rem;
+    grid-column: 1 / -1;           /* h1 spans full width on all screens */
 }
 
 @media (min-width: 800px) {
     main {
         grid-template-columns: 2fr 1fr;  /* two columns: first card wider, second narrower */
     }
-    /* h1 spans full width on all screens */
-    h1 {
-        grid-column: 1 / -1;
-    }
+    /* h1 already has grid-column: 1/-1 from above, no need to repeat */
 }
 
 /* ---------- card styles ---------- */
