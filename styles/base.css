@@ -1,0 +1,287 @@
+/* styles/base.css */
+
+/* ---------- CSS reset / box-sizing ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- global variables (color schema) ---------- */
+:root {
+    --primary-bg: #fefefe;
+    --text-dark: #1e2b37;
+    --accent-deep: #2c4c6b;      /* deep slate blue */
+    --accent-soft: #e3eef9;       /* light airy blue */
+    --card-bg: #ffffff;
+    --border-light: #cbd5e1;
+    --hover-bg: #d4e2ed;
+    --font-serif: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---------- header styling ---------- */
+header {
+    background-color: var(--accent-deep);
+    color: white;
+    padding: 1.5rem 1rem 0.8rem 1rem;
+    text-align: center;
+}
+
+#course-title {
+    display: block;                /* block to center easily */
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ---------- navigation – flex menu + hover effect ---------- */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    background-color: transparent;
+}
+
+nav a:hover {
+    background-color: var(--hover-bg);
+    color: var(--accent-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* placeholder final project link (no hover effect needed, but same style) */
+.placeholder-link {
+    cursor: default;
+    opacity: 0.9;
+}
+
+/* ---------- main layout: centered width ---------- */
+main {
+    max-width: 1100px;
+    width: 90%;
+    margin: 2rem auto;
+    flex: 1;
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-deep);
+    margin: 1rem 0 2rem 0;
+    border-left: 8px solid var(--accent-deep);
+    padding-left: 1.5rem;
+}
+
+/* ---------- cards grid layout (CSS Grid) ---------- */
+main {
+    display: grid;
+    grid-template-columns: 1fr;    /* mobile default stacked */
+    gap: 2rem;
+}
+
+@media (min-width: 800px) {
+    main {
+        grid-template-columns: 2fr 1fr;  /* two columns: first card wider, second narrower */
+    }
+    /* h1 spans full width on all screens */
+    h1 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ---------- card styles ---------- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    padding: 1.8rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(44, 76, 107, 0.1);
+}
+
+.card h2 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--accent-deep);
+    background-color: var(--accent-soft);
+    padding: 0.4rem 1rem;
+    border-radius: 40px 12px 12px 40px;
+    margin: -0.8rem 0 1.5rem -1rem;   /* subtle overlap */
+    display: inline-block;
+    border-left: 6px solid var(--accent-deep);
+}
+
+/* about me layout inside card */
+.card-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 2;
+    min-width: 220px;
+}
+
+.text-content p {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.image-wrapper img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-soft);
+    max-width: 100%;
+    height: auto;
+}
+
+.subhead {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1.2rem 0 0.5rem 0;
+    color: var(--accent-deep);
+    border-bottom: 2px dashed var(--border-light);
+    padding-bottom: 0.3rem;
+}
+
+.location-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.flag-img {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* resources card specific */
+.resources-layout {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resources-list {
+    flex: 1;
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.resources-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.resources-list a {
+    text-decoration: none;
+    color: var(--accent-deep);
+    font-weight: 500;
+    border-bottom: 1px dotted transparent;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.resources-list a:hover {
+    border-bottom: 1px dotted var(--accent-deep);
+    color: #0f2b3b;
+}
+
+.resource-img img {
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- footer ---------- */
+footer {
+    background-color: var(--accent-deep);
+    color: white;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+#lastModified {
+    color: #f0e9d8;
+    font-size: 0.95rem;
+    border-top: 1px solid #6a8eaa;
+    padding-top: 0.6rem;
+    display: inline-block;
+}
+
+/* ---------- responsive fine-tuning ---------- */
+@media (max-width: 600px) {
+    nav {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px;
+    }
+    #course-title {
+        font-size: 1.6rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .card-content {
+        flex-direction: column;
+    }
+    .location-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .resources-layout {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="John Osagie">
+    
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – John Osagie. Computer Science student focused on web development, creating and solving web applications from Lagos, Nigeria.">
+    <title>WDD 131 – Dynamic Web Fundamentals – John Osagie</title>
+    
+    <!-- Google Fonts API (two fonts: Montserrat & Open Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="styles/base.css">
+    
+    
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/johnosagie" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p25#p25" target="_blank" rel="noopener">Scripture</a>
+            <a href="#" class="placeholder-link">Final Project</a> <!-- placeholder link -->
+        </nav>
+    </header>
+    
+    <main>
+        <h1>John Osagie</h1>
+        
+        <!-- first card: About Me -->
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <div class="text-content">
+                    <p>Hello! I'm John, a computer science student with a deep passion for web development. I'm from Lagos, Nigeria — the vibrant economic hub of West Africa. Currently pursuing my bachelor's degree with a focus on creating dynamic, user-friendly web applications that solve real-world problems.</p>
+                    <p>I love the entire process of building for the web: from designing intuitive interfaces to writing clean, efficient code. My goal is to become a full-stack developer who can craft end-to-end solutions that make a difference in people's lives, especially across Africa.</p>
+                </div>
+                <div class="image-wrapper">
+                    <!-- optimized local image: profile placeholder (replace with your photo) -->
+                    <img src="images/john-profile.webp" alt="Portrait of John Osagie" loading="lazy" width="200" height="200">
+                </div>
+            </div>
+            <h3 class="subhead">Lagos, Nigeria</h3>
+            <div class="location-row">
+                <!-- Nigerian flag image – optimized -->
+                <img src="images/nigeria-flag.webp" alt="Official flag of Nigeria" class="flag-img" width="120" height="72" loading="lazy">
+                <p><em>Lagos — Africa's largest city, known for its vibrant energy, tech innovation, and rich cultural heritage.</em></p>
+            </div>
+        </section>
+        
+        <!-- second card: Web Dev & Learning Resources -->
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="card-content resources-layout">
+                
+                <ul class="resources-list">
+                    <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a></li>
+                    <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                    <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                </ul>
+                
+                <div class="resource-img">
+                    <img src="images/code-laptop.webp" alt="Laptop with code on screen" loading="lazy" width="240" height="160">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>
+            © <span id="currentyear"></span> John Osagie · Lagos, Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
