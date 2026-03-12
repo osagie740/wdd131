@@ -1,0 +1,51 @@
+/* temples-large.css - Desktop View */
+/* Only styles that CHANGE from mobile go here */
+
+@media only screen and (min-width: 768px) {
+    
+    /* Hide hamburger button in desktop */
+    #hamburger {
+        display: none;
+    }
+    
+    /* Navigation becomes horizontal FLEX (requirement) */
+    #navMenu {
+        display: flex !important; /* Always visible */
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    #navMenu a {
+        border-top: none;
+        border-right: 1px solid rgba(255,255,255,0.2);
+        padding: 0.8rem 2rem;
+    }
+    
+    #navMenu a:last-child {
+        border-right: none;
+    }
+    
+    /* Reset hover effect for desktop */
+    #navMenu a:hover {
+        padding-left: 2rem; /* Override mobile hover */
+        background-color: var(--secondary);
+    }
+    
+    /* Header centered */
+    header {
+        text-align: center;
+    }
+    
+    /* GRID - 3 columns in desktop (requirement) */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    /* Larger heading */
+    h1 {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
+}

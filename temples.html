@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="John Osagie">
+    <meta name="description" content="Temple Album - WDD 131 Dynamic Web Fundamentals">
+    
+    <title>Temple Album | John Osagie</title>
+    
+    <!-- Same fonts as your index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">Temple Album</span>
+        
+        <!-- Hamburger Button -->
+        <button id="hamburger">☰</button>
+        
+        <!-- Navigation Menu -->
+        <nav id="navMenu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Beautiful Temples</h1>
+        
+        <!-- Temple Grid - 9 figures -->
+        <div class="grid">
+            <figure>
+                <img src="images/tem1.jfif" alt="Salt Lake Temple" loading="lazy" width="400" height="300">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem2.jfif" alt="Provo Temple" loading="lazy" width="400" height="300">
+                <figcaption>Provo Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem3.jfif" alt="Jordan River Temple" loading="lazy" width="400" height="300">
+                <figcaption>Jordan River Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem4.jfif" alt="Mount Timpanogos Temple" loading="lazy" width="400" height="300">
+                <figcaption>Mount Timpanogos</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem6.jfif" alt="Bountiful Temple" loading="lazy" width="400" height="300">
+                <figcaption>Bountiful Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/temp5.jfif" alt="Draper Temple" loading="lazy" width="400" height="300">
+                <figcaption>Draper Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem7.jfif" alt="Oquirrh Mountain Temple" loading="lazy" width="400" height="300">
+                <figcaption>Oquirrh Mountain</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem8.jfif" alt="St. George Temple" loading="lazy" width="400" height="300">
+                <figcaption>St. George Temple</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/tem9.jfif" alt="Manti Temple" loading="lazy" width="400" height="300">
+                <figcaption>Manti Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© <span id="currentyear"></span> John Osagie · Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

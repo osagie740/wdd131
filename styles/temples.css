@@ -1,0 +1,166 @@
+/* temples.css - Mobile First */
+/* This file contains MOST of your CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Your own color scheme */
+:root {
+    --primary: #1e4a6b;    /* Deep blue */
+    --secondary: #e67e22;   /* Orange */
+    --accent: #3498db;      /* Light blue */
+    --dark: #2c3e50;        /* Dark blue-gray */
+    --light: #f4f4f4;       /* Light gray */
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--light);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+#course-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* HAMBURGER BUTTON - only shows in mobile */
+#hamburger {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 10;
+    display: block;
+}
+
+#hamburger:hover {
+    color: var(--secondary);
+}
+
+/* NAVIGATION - Flex is used here (requirement) */
+#navMenu {
+    display: none; /* Hidden by default in mobile */
+    margin-top: 1rem;
+}
+
+#navMenu.show {
+    display: flex;
+    flex-direction: column;
+}
+
+#navMenu a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT (requirement) */
+#navMenu a:hover {
+    background-color: var(--secondary);
+    padding-left: 1.5rem;
+}
+
+#navMenu a.active {
+    background-color: var(--secondary);
+    font-weight: 600;
+}
+
+/* MAIN - centered with max-width (requirement) */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+/* GRID - CSS Grid for figures (requirement) */
+/* Mobile view: 1 column (requirement) */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* FIGURE styles */
+figure {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on figures */
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--primary);
+    background-color: var(--white);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Color contrast is good:
+   - Dark blue (#1e4a6b) on white passes AA
+   - Orange (#e67e22) on dark blue passes AA
+   - White text on dark blue passes AA
+*/
