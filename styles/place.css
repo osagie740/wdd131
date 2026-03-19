@@ -1,0 +1,115 @@
+/* simple color variables */
+:root {
+    --green: #006400;
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --border: #cccccc;
+}
+
+/* page setup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--light-gray);
+}
+
+/* header */
+header {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+}
+
+/* navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* main title */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* hero image */
+picture img {
+    width: 100%;
+    height: auto;
+}
+
+/* cards */
+.card {
+    background-color: var(--white);
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+/* section titles */
+.card h2 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+/* location section */
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* weather list */
+ul {
+    padding-left: 20px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* SVG hidden by default */
+.weather-icon {
+    display: none;
+}
+
+/* desktop weather emoji */
+#weather-title::after {
+    content: " ⛅";
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .weather-icon {
+        display: block;
+        margin-top: 10px;
+    }
+
+    #weather-title::after {
+        content: "";
+    }
+}

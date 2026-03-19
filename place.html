@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nigeria Country Page</title>
+    <meta name="description" content="Learn about Nigeria, its culture and weather">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h2>WDD 131 - Country Page</h2>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Culture</a>
+        <a href="#">Weather</a>
+        <a href="#">Final Project</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Nigeria</h1>
+
+    <!-- HERO IMAGE (CORRECT srcset) -->
+    <picture>
+        <source srcset="images/nigeria1.jfif" media="(max-width: 500px)">
+        <source srcset="images/nigeria2.jfif" media="(max-width: 1000px)">
+        <img src="images/nigeria3.jfif" alt="Nigeria Landscape">
+    </picture>
+
+    <!-- ABOUT -->
+    <section class="card">
+        <h2>About Nigeria</h2>
+        <p>
+            Nigeria is a country in West Africa. It has a large population and is known
+            for its rich culture, music, and natural resources.
+        </p>
+
+        <div class="location">
+            <img src="images/nigeriaflag.png" alt="Nigeria Flag" width="100">
+            <p>Africa</p>
+        </div>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="card">
+        <h2 id="weather-title">Weather</h2>
+
+        <!-- SVG (mobile only) -->
+        <svg class="weather-icon" width="60" height="60" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="14" fill="orange"/>
+        </svg>
+
+        <ul>
+            <li>Temperature: <span id="temp">28</span>°C</li>
+            <li>Wind Speed: <span id="wind">10</span> km/h</li>
+            <li>Wind Chill: <span id="windchill"></span></li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> John Osagie | Nigeria</p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
