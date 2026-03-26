@@ -119,3 +119,10 @@ document.getElementById("lastModified").textContent = "Last Modified: " + docume
 
 // load all
 displayTemples(temples);
+document.getElementById("old").addEventListener("click", function() {
+  filterTemples("old");
+});
+
+document.getElementById("home").addEventListener("click", function() {
+  displayTemples(temples);
+});

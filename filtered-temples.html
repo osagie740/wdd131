@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtered Temples</title>
-    <link rel="stylesheet" href="styles/filtered-temples.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="A gallery of temples with filtering options by size and age.">
+  <meta name="author" content="Your Name Here">
+  <title>Temple Gallery</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
 
 <header>
     <h1>Temple Album</h1>
-    <nav>
-        <button onclick="displayTemples(temples)">Home</button>
-        <button onclick="filterOld()">Old</button>
-        <button onclick="filterNew()">New</button>
-        <button onclick="filterLarge()">Large</button>
-        <button onclick="filterSmall()">Small</button>
-    </nav>
+   <nav>
+  <a href="#" id="home">Home</a>
+  <a href="#" id="old">Old</a>
+  <a href="#" id="new">New</a>
+  <a href="#" id="large">Large</a>
+  <a href="#" id="small">Small</a>
+</nav>
 </header>
 
 <main id="temple-container"></main>

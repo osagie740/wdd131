@@ -23,3 +23,25 @@ nav button {
 img {
     width: 100%;
 }
+nav {
+  display: flex;
+  justify-content: space-around; /* spreads links evenly */
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #0077cc; /* adds hover effect */
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column; /* stack links vertically on small screens */
+    align-items: center;
+  }
+}
