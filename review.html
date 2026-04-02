@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Review Submitted</title>
+<script>
+let count = localStorage.getItem("reviews");
+
+if (!count) {
+    count = 0;
+}
+
+count++;
+localStorage.setItem("reviews", count);
+</script>
+</head>
+
+<body>
+
+<h1>Thank You!</h1>
+<p>Your review has been submitted.</p>
+
+<p id="counter"></p>
+
+<script>
+document.getElementById("counter").textContent =
+"Total Reviews Submitted: " + localStorage.getItem("reviews");
+</script>
+
+</body>
+</html>
