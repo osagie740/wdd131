@@ -35,3 +35,15 @@ input[type="submit"] {
     margin-top: 15px;
     cursor: pointer;
 }
+/* Mobile First (default styles above) */
+
+/* Desktop view */
+@media (min-width: 600px) {
+    form {
+        max-width: 600px;
+    }
+
+    input, select, textarea {
+        font-size: 1.1em;
+    }
+}
