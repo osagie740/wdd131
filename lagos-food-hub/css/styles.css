@@ -1,9 +1,14 @@
+
+
+
+/* PAGE LAYOUT */
 body {
     font-family: Arial;
     margin: 0;
     background-color: #F5F5F5;
 }
 
+/* HEADER */
 header {
     background: #FF5733;
     color: white;
@@ -17,18 +22,77 @@ nav a {
     text-decoration: none;
 }
 
+/* MAIN */
 main {
     padding: 20px;
 }
 
-#restaurantList {
+/* 🔥 FIXED GRID LAYOUT (IMPORTANT) */
+#restaurantList, #featured {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    align-items: stretch;
 }
 
+/* CARD DESIGN */
 .card {
     background: white;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* IMAGE FIX */
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* BUTTONS */
+button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background: #FF5733;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e64a2e;
+}
+/* FOOTER STYLE */
+footer {
+    background-color: #FF5733;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* FOOTER LINKS */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER TEXT SPACING */
+footer p {
+    margin: 5px 0;
 }
