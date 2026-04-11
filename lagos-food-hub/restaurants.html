@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Browse Lagos restaurants">
+    <meta name="author" content="Osagie John">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - Lagos Food Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Restaurants</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Filter Restaurants</h2>
+
+    <button onclick="filterRestaurants('all')">All</button>
+    <button onclick="filterRestaurants('cheap')">Affordable</button>
+    <button onclick="filterRestaurants('top')">Top Rated</button>
+
+    <div id="restaurantList"></div>
+</main>
+
+<footer>
+    <a href="references.html">References</a>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
